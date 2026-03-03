@@ -1,0 +1,29 @@
+{
+  "name": "@aeryflux/design",
+  "version": "0.1.0",
+  "description": "AeryFlux Design System - Tokens, components, and guidelines",
+  "type": "module",
+  "main": "tokens.js",
+  "exports": {
+    ".": "./tokens.js",
+    "./tokens": "./tokens.js",
+    "./tokens.css": "./tokens.css"
+  },
+  "files": [
+    "tokens.js",
+    "tokens.css",
+    "README.md"
+  ],
+  "keywords": [
+    "design-system",
+    "tokens",
+    "css",
+    "aeryflux"
+  ],
+  "author": "AeryFlux",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeryflux/design"
+  }
+}
