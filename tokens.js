@@ -107,6 +107,13 @@ export const animation = {
     default: 'cubic-bezier(0.4, 0, 0.2, 1)',
     bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
   },
+  keyframes: {
+    pulse: 'aery-pulse',
+    glow: 'aery-glow',
+    fadeIn: 'aery-fade-in',
+    slideUp: 'aery-slide-up',
+    spin: 'aery-spin',
+  },
 };
 
 export const layout = {
