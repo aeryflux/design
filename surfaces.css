@@ -1,0 +1,96 @@
+/**
+ * AeryFlux Surface System
+ * Use [data-surface="dark|green|white"] on html or body
+ */
+
+/* ============================================
+ * Surface: Dark (default)
+ * Black background, gray accents
+ * ============================================ */
+:root,
+[data-surface="dark"] {
+  --surface-primary: #888888;
+  --surface-secondary: #888888;
+  --surface-background: #000000;
+  --surface-background-subtle: #050508;
+  --surface-background-elevated: #0a0a0f;
+  --surface-text: #ffffff;
+  --surface-text-secondary: #888899;
+  --surface-text-muted: #666677;
+  --surface-border: rgba(136, 136, 136, 0.3);
+  --surface-border-solid: #333344;
+  --surface-accent: #888888;
+  --surface-accent-glow: rgba(136, 136, 136, 0.3);
+
+  color-scheme: dark;
+}
+
+/* ============================================
+ * Surface: Green (AeryFlux signature)
+ * Dark green background, neon green accents
+ * ============================================ */
+[data-surface="green"] {
+  --surface-primary: #00ff88;
+  --surface-secondary: #00d4ff;
+  --surface-background: #050a08;
+  --surface-background-subtle: #030805;
+  --surface-background-elevated: #0a0f0c;
+  --surface-text: #ffffff;
+  --surface-text-secondary: #88aa99;
+  --surface-text-muted: #557766;
+  --surface-border: rgba(0, 255, 136, 0.2);
+  --surface-border-solid: #1a3328;
+  --surface-accent: #00ff88;
+  --surface-accent-glow: rgba(0, 255, 136, 0.3);
+
+  color-scheme: dark;
+}
+
+/* ============================================
+ * Surface: White (Light mode)
+ * Light gray background, dark accents
+ * ============================================ */
+[data-surface="white"] {
+  --surface-primary: #1a1a1a;
+  --surface-secondary: #333333;
+  --surface-background: #e8e8e8;
+  --surface-background-subtle: #d8d8d8;
+  --surface-background-elevated: #ffffff;
+  --surface-text: #1a1a1a;
+  --surface-text-secondary: #333333;
+  --surface-text-muted: #666666;
+  --surface-border: rgba(0, 0, 0, 0.15);
+  --surface-border-solid: #cccccc;
+  --surface-accent: #1a1a1a;
+  --surface-accent-glow: rgba(0, 0, 0, 0.1);
+
+  color-scheme: light;
+}
+
+/* ============================================
+ * Surface Base Styles
+ * Apply when using surfaces
+ * ============================================ */
+[data-surface] {
+  background-color: var(--surface-background);
+  color: var(--surface-text);
+}
+
+/* ============================================
+ * Surface Utility Classes
+ * ============================================ */
+.surface-bg { background-color: var(--surface-background); }
+.surface-bg-subtle { background-color: var(--surface-background-subtle); }
+.surface-bg-elevated { background-color: var(--surface-background-elevated); }
+
+.surface-text { color: var(--surface-text); }
+.surface-text-secondary { color: var(--surface-text-secondary); }
+.surface-text-muted { color: var(--surface-text-muted); }
+
+.surface-border { border-color: var(--surface-border); }
+.surface-border-solid { border-color: var(--surface-border-solid); }
+
+.surface-accent { color: var(--surface-accent); }
+.surface-accent-bg { background-color: var(--surface-accent); }
+
+.surface-glow { box-shadow: 0 0 20px var(--surface-accent-glow); }

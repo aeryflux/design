@@ -1,7 +1,7 @@
 {
   "name": "@aeryflux/design",
-  "version": "0.2.3",
-  "description": "AeryFlux Design System - Tokens, Tailwind preset, and CSS utilities",
+  "version": "0.3.0",
+  "description": "AeryFlux Design System - Tokens, Surfaces, Tailwind preset",
   "type": "module",
   "main": "tokens.js",
   "types": "tokens.d.ts",
@@ -18,6 +18,12 @@
     },
     "./tokens.css": "./tokens.css",
     "./css": "./tokens.css",
+    "./surfaces": {
+      "types": "./surfaces.d.ts",
+      "import": "./surfaces.js",
+      "require": "./surfaces.js"
+    },
+    "./surfaces.css": "./surfaces.css",
     "./tailwind": {
       "import": "./tailwind.preset.js",
       "require": "./tailwind.preset.js"
@@ -27,12 +33,17 @@
     "tokens.js",
     "tokens.d.ts",
     "tokens.css",
+    "surfaces.js",
+    "surfaces.d.ts",
+    "surfaces.css",
     "tailwind.preset.js",
     "README.md"
   ],
   "keywords": [
     "design-system",
     "design-tokens",
+    "surfaces",
+    "themes",
     "tailwind",
     "tailwind-preset",
     "css",
