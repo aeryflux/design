@@ -1,6 +1,6 @@
-# AeryFlux Design System
+# @aeryflux/design
 
-> Minimalist design tokens and guidelines for the AeryFlux ecosystem
+> Minimalist design tokens and Tailwind preset for the AeryFlux ecosystem
 
 ## Philosophy
 
@@ -9,14 +9,43 @@
 - **Consistent**: Same tokens across all apps
 - **Accessible**: High contrast, readable typography
 
-## Quick Start
+## Installation
 
-```css
-@import '@aeryflux/design/tokens.css';
+```bash
+npm install @aeryflux/design
 ```
 
+## Quick Start
+
+### Option 1: Tailwind CSS Preset (Recommended)
+
 ```js
-import { colors, typography } from '@aeryflux/design';
+// tailwind.config.js
+export default {
+  presets: [require('@aeryflux/design/tailwind')],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+}
+```
+
+### Option 2: CSS Custom Properties
+
+```css
+@import '@aeryflux/design/css';
+```
+
+### Option 3: JavaScript Tokens
+
+```js
+import { colors, typography, spacing } from '@aeryflux/design';
+import tokens from '@aeryflux/design'; // or import all
+```
+
+### TypeScript Support
+
+Full TypeScript definitions included:
+
+```ts
+import type { Colors, Typography, DesignTokens } from '@aeryflux/design';
 ```
 
 ## Design Tokens
