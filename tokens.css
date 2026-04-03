@@ -14,8 +14,10 @@
    * Colors - Surfaces
    * ============================================ */
   --color-bg-base: #050508;
+  --color-bg-deep: #06060e;
   --color-bg-elevated: #0a0a0f;
   --color-bg-subtle: #111118;
+  --color-bg-tertiary: #12121a;
 
   /* ============================================
    * Colors - Text
@@ -29,6 +31,7 @@
    * ============================================ */
   --color-success: #00ff88;
   --color-error: #ff4444;
+  --color-danger: #ff3366;
   --color-warning: #ffaa00;
   --color-info: #00d4ff;
 
@@ -87,6 +90,9 @@
   --radius-full: 9999px;
   --border-width: 1px;
   --border-color: #1a1a1f;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(0, 255, 136, 0.2);
+  --border-glow: rgba(0, 255, 136, 0.15);
 
   /* ============================================
    * Effects
@@ -96,6 +102,14 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
   --glow-primary: 0 0 20px rgba(0, 255, 136, 0.3);
   --glow-secondary: 0 0 20px rgba(0, 212, 255, 0.3);
+  --accent-glow: rgba(0, 255, 136, 0.25);
+
+  /* ============================================
+   * Backgrounds - Composites
+   * ============================================ */
+  --bg-card: linear-gradient(135deg, rgba(15, 15, 25, 0.9) 0%, rgba(10, 10, 18, 0.95) 100%);
+  --bg-glass: rgba(15, 15, 22, 0.9);
+  --bg-glass-blur: 10px;
 
   /* ============================================
    * Animation
@@ -126,10 +140,41 @@ html {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: var(--leading-normal);
-  color: var(--color-text-secondary);
-  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-deep);
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-normal) var(--easing-default);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-bg-base);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -306,3 +351,54 @@ body {
 .opacity-100 { opacity: 1; }
 .overflow-hidden { overflow: hidden; }
 .overflow-auto { overflow: auto; }
+
+/* ============================================
+ * Background Utilities
+ * ============================================ */
+.bg-deep { background-color: var(--color-bg-deep); }
+.bg-card { background: var(--bg-card); }
+.bg-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(var(--bg-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bg-glass-blur));
+}
+
+/* ============================================
+ * Grid Overlay (opt-in)
+ * Use on an element or ::before pseudo
+ * ============================================ */
+.aery-grid {
+  --grid-color: rgba(255, 255, 255, 0.06);
+  --grid-size: 40px;
+}
+
+.aery-grid::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Surface-aware grid colors */
+[data-surface="green"] .aery-grid,
+[data-surface="green"].aery-grid {
+  --grid-color: rgba(0, 255, 136, 0.08);
+}
+
+[data-surface="white"] .aery-grid,
+[data-surface="white"].aery-grid {
+  --grid-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+ * Brand Name Utility
+ * ============================================ */
+.brand-name {
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
