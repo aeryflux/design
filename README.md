@@ -214,7 +214,7 @@ Hover:     border-primary (subtle)
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding tokens and utilities.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding tokens and submitting pull requests.
 
 ## Changelog
 
@@ -222,4 +222,4 @@ See [CHANGELOG.md](./CHANGELOG.md) for version history.
 
 ## License
 
-MIT
+[MIT](./LICENSE)
