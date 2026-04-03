@@ -11,8 +11,10 @@ export const colors = {
   // Surfaces
   bg: {
     base: '#050508',
+    deep: '#06060e',
     elevated: '#0a0a0f',
     subtle: '#111118',
+    tertiary: '#12121a',
   },
 
   // Text
@@ -25,11 +27,16 @@ export const colors = {
   // Semantic
   success: '#00ff88',
   error: '#ff4444',
+  danger: '#ff3366',
   warning: '#ffaa00',
   info: '#00d4ff',
 
   // Borders
   border: '#1a1a1f',
+  borderSubtle: 'rgba(255, 255, 255, 0.06)',
+  borderHover: 'rgba(0, 255, 136, 0.2)',
+  borderGlow: 'rgba(0, 255, 136, 0.15)',
+  accentGlow: 'rgba(0, 255, 136, 0.25)',
 };
 
 export const typography = {
