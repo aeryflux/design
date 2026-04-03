@@ -212,6 +212,14 @@ Hover:     border-primary (subtle)
 | Atlas | Mobile globe app |
 | Holocron | Admin panel |
 
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding tokens and utilities.
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for version history.
+
 ## License
 
 MIT
